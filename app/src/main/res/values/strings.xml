@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VR</string>
+    <string name="record_hint">Record</string>
+    <string name="stop_hint">Stop</string>
+    <string name="pause_hint">Pause</string>
+    <string name="save_hint">Save</string>
+    <string name="play_hint">Play</string>
+    <string name="cancel_hint">Cancel</string>
+</resources>

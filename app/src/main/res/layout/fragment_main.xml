@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Chronometer
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/chronometerTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+
+    <SeekBar
+        android:visibility="gone"
+        android:layout_above="@+id/layoutIcons"
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/layoutIcons"
+        android:layout_above="@+id/layoutHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/voiceRecord"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mic_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/voicePlay"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_arrow_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <ImageView
+            android:id="@+id/voiceStop"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stop_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/voicePause"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/voiceCancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/voiceSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_save_black_36dp"
+            android:tint="@android:color/darker_gray"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutHint"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="40dp"
+        >
+
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/recordHint"
+            android:text="@string/record_hint"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mic_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/playHint"
+            android:text="@string/play_hint"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mic_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/stop_hint"
+            android:id="@+id/stopHint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stop_black_36dp"
+            android:tint="@android:color/darker_gray"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/pauseHint"
+            android:text="@string/pause_hint"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/cancelHint"
+            android:text="@string/cancel_hint"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause_black_36dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/save_hint"
+            android:id="@+id/saveHint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_save_black_36dp"
+            android:tint="@android:color/darker_gray"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
